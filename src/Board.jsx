@@ -29,9 +29,9 @@ class Board extends Component {
 
   flipCellsAround(coord) {
     const { nColumns, nRows } = this.props
-    let board = this.state.board
+    const board = [...this.state.board]
 
-    let [x, y] = coord.split('-').map(Number)
+    const [x, y] = coord.split('-').map(Number)
 
     function flipCell(x, y) {
       if (x >= 0 && x < nRows && y >= 0 && y < nColumns) {
